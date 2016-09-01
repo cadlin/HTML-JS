@@ -14,7 +14,10 @@
         <option value="5">Bottom_Layer</option>            
       </select> 
 	  </p>
-      </div> 		
+	  <p id = "ChipLayerTemperature">*****NO Data Available*****</p>
+
+      </div> 
+	  
     </body>  
 	
 	<script type="text/javascript">  
@@ -27,9 +30,10 @@
             //alert(oListbox.options[indx].getAttribute("value"));//对应的value  '2'
 			
 			
-			path = "Image/" + indx + ".jpg";		
-            var divImage = document.getElementById('myimage');
+			path = "Image/" + (indx + 1) + ".jpg";		
+            var divImage = document.getElementById('ChipLayerTemperature');
             divImage.innerHTML = '<img src="'+path+'" />';
+			//document.write('<img src="'+path+'" />');
 		}
     </script>  
 	
