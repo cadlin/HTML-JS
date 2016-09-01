@@ -6,7 +6,7 @@
     <body>        
       <div id = "myimage"> 
       <p>	  
-      <select name="Temperature" id="Temperature" onchange = "insertPicture()">  
+      <select name="ChipLayerTemperature" id="ChipLayerTemperature" onchange = "insertPicture('ChipLayerTemperature')">  
         <option value="1">Top_Layer</option>  
         <option value="2">Second_Layer</option>  
         <option value="3">Third_Layer</option>  
@@ -14,9 +14,21 @@
         <option value="5">Bottom_Layer</option>            
       </select> 
 	  </p>
-	  <p id = "ChipLayerTemperature"><img src="Image/1.jpg" /></p>
+	  <p id = "ChipLayerTemperatureImage"><img src="Image/Top_Layer.jpg" /></p>
+	  
+	  <select name="PackageLayerTemperature" id="PackageLayerTemperature" onchange = "insertPicture('PackageLayerTemperature')">  
+        <option value="1">1st</option>  
+        <option value="2">2nd</option>  
+        <option value="3">3rd</option>  
+        <option value="4">4th</option>  
+        <option value="5">5th</option>            
+      </select> 
+	  </p>
+	  <p id = "PackageLayerTemperatureImage"><img src="Image/1st.jpg" /></p>
+	  
+	  
       </div> 
       <script src="insertPicture.js"> </script>	  
-    </body>    
+    </body>   
 	
 </html>  
