@@ -7,14 +7,14 @@
       <div id = "myimage"> 
       <p>	  
       <select name="ChipLayerTemperature" id="ChipLayerTemperature" onchange = "insertPicture('ChipLayerTemperature')">  
-        <option value="1">Top_Layer</option>  
-        <option value="2">Second_Layer</option>  
-        <option value="3">Third_Layer</option>  
-        <option value="4">Fourth_Layer</option>  
-        <option value="5">Bottom_Layer</option>            
+        <option>Top_Layer</option>  
+        <option>Second_Layer</option>  
+        <option>Third_Layer</option>  
+        <option>Fourth_Layer</option>  
+        <option>Bottom_Layer</option>            
       </select> 
 	  </p>
-	  <p id = "ChipLayerTemperatureImage"><img src="Image/Top_Layer.jpg" /></p>
+	  <p id = "ChipLayerTemperatureImage"><img src="Image/ChipLayerTemperature_1.png" /></p>
 	  
 	  <select name="PackageLayerTemperature" id="PackageLayerTemperature" onchange = "insertPicture('PackageLayerTemperature')">  
         <option value="1">1st</option>  
@@ -24,11 +24,20 @@
         <option value="5">5th</option>            
       </select> 
 	  </p>
-	  <p id = "PackageLayerTemperatureImage"><img src="Image/1st.jpg" /></p>
-	  
+	  <p id = "PackageLayerTemperatureImage"><img src="Image/PackageLayerTemperature_1.png" /></p>	  
 	  
       </div> 
-      <script src="insertPicture.js"> </script>	  
+      <script>
+		function insertPicture(elmtID){		
+	        oListbox = document.getElementById(elmtID);  		
+		    var indx = oListbox.selectedIndex;				
+			var value = oListbox.options[indx].firstChild.nodeValue;			
+			path = "Image/" + elmtID + "_" + (indx+1) + ".png";	
+            elmtID += "Image";
+            var divImage = document.getElementById(elmtID);
+            divImage.innerHTML = '<img src="'+path+'" />';
+		}
+	  </script>	  
     </body>   
 	
 </html>  
