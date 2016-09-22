@@ -1,8 +1,23 @@
-.screenshot {
-    max-width: 460px;
+.app {
+    display: -webkit-flex;
+    display: flex;
+}
+.title {
+    background-color: #33BEBE;
+    color: white;
+    font-size: 48px;
+    font-family: Helvetica;
+    text-align: center;
+    padding: 20px;
+    margin: 60px;
+}
+.image {
+    margin-right: 50px;
 }
 .description {
-    max-width: 705px;
+    color: grey;
+    font-size: 24px;
+    font-family: Helvetica;
 }
 * {
     outline: 1px solid red !important;
